@@ -10,7 +10,7 @@ public class conexion {
     public Connection conexion(){
         try{
             Class.forName("org.gjt.mm.mysql.Driver");
-            conect = DriverManager.getConnection("jdbc:mysql://localhost/bdAgenda3654","root","");
+            conect = DriverManager.getConnection("jdbc:mysql://localhost/bdVinicioGay","root","");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "error en la conexion a la Base de Datos");
         }
