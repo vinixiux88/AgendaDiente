@@ -49,7 +49,11 @@ public class Empleado extends javax.swing.JFrame {
                 formWindowActivated(evt);
             }
         });
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                formMouseMoved(evt);
+            }
+        });
 
         inicioEmpleado.setBackground(new java.awt.Color(153, 255, 255));
         inicioEmpleado.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -62,14 +66,12 @@ public class Empleado extends javax.swing.JFrame {
         inicioEmpleado.setLayout(inicioEmpleadoLayout);
         inicioEmpleadoLayout.setHorizontalGroup(
             inicioEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1110, Short.MAX_VALUE)
+            .addGap(0, 1198, Short.MAX_VALUE)
         );
         inicioEmpleadoLayout.setVerticalGroup(
             inicioEmpleadoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 710, Short.MAX_VALUE)
         );
-
-        getContentPane().add(inicioEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 1110, 710));
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -77,20 +79,25 @@ public class Empleado extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 218, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 111, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 220, -1));
+        jPanel3.setBackground(new java.awt.Color(53, 80, 106));
 
         jButton2.setText("jButton2");
 
         jButton3.setText("jButton3");
 
         jButton4.setText("jButton4");
+        jButton4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton4MouseMoved(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -119,6 +126,11 @@ public class Empleado extends javax.swing.JFrame {
         });
 
         jButton1.setText("jButton8");
+        jButton1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                jButton1MouseMoved(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -172,13 +184,33 @@ public class Empleado extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 220, 370));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(inicioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(inicioEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        Border thickBorder = new LineBorder(BTNmenuACT, 54);
+        jButton1.setText("casa");
+        Border thickBorder = new LineBorder(BTNmenuACT, 55);
         jButton1.setBorder(thickBorder);
         jButton4.setBorder(thickBorder);
         jButton7.setBorder(thickBorder);
@@ -186,7 +218,7 @@ public class Empleado extends javax.swing.JFrame {
         jButton3.setVisible(false);
         jButton5.setVisible(false);
         jButton6.setVisible(false);
-        jButton1.setText("casa");
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowActivated
 
@@ -222,6 +254,23 @@ jButton3.setVisible(false);// TODO add your handling code here:
         jButton5.setVisible(false);
         jButton6.setVisible(false);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseMoved
+Border thickBorder = new LineBorder(BTNmenuMouse, 56);
+        jButton1.setBorder(thickBorder);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1MouseMoved
+
+    private void formMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseMoved
+  Border thickBorder = new LineBorder(BTNmenuACT, 56);
+        jButton1.setBorder(thickBorder); 
+        jButton4.setBorder(thickBorder); // TODO add your handling code here:
+    }//GEN-LAST:event_formMouseMoved
+
+    private void jButton4MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseMoved
+Border thickBorder = new LineBorder(BTNmenuMouse, 56);
+        jButton4.setBorder(thickBorder);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4MouseMoved
 
     /**
      * @param args the command line arguments
