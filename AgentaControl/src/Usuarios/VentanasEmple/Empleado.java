@@ -15,37 +15,13 @@ import javax.swing.border.LineBorder;
  */
 public class Empleado extends javax.swing.JFrame {
 
-   Color BTNmenuACT =new Color(53,80,106);
-   Color BTNmenuMouse =new Color(42,66,89);
+   Color BTNmenuACT =new Color(45,70,94);
+   Color BTNmenuMouse =new Color(34,57,79);
     
     public Empleado() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
-        //no visible
-        jButton2.setVisible(false);
-        jButton3.setVisible(false);
-        jButton5.setVisible(false);
-        jButton6.setVisible(false);
-        //colorFondo
-        jButton1.setBackground(BTNmenuACT);
-        jButton1.setOpaque(true);
-        jButton1.setContentAreaFilled(false); 
-        jButton2.setBackground(BTNmenuACT);
-        jButton2.setOpaque(true);
-        jButton2.setContentAreaFilled(false);
-        jButton3.setBackground(BTNmenuACT);
-        jButton3.setOpaque(true);
-        jButton3.setContentAreaFilled(false); 
-        jButton4.setBackground(BTNmenuACT);
-        jButton4.setOpaque(true);
-        jButton4.setContentAreaFilled(false);
-        jButton5.setBackground(BTNmenuACT);
-        jButton5.setOpaque(true);
-        jButton5.setContentAreaFilled(false);
-        jButton6.setBackground(BTNmenuACT);
-        jButton6.setOpaque(true);
-        jButton6.setContentAreaFilled(false);
-        
+        SetearBTNS();
     }
 
     /**
@@ -67,6 +43,7 @@ public class Empleado extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -137,7 +114,7 @@ public class Empleado extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 230, 120));
 
-        jPanel3.setBackground(new java.awt.Color(53, 80, 106));
+        jPanel3.setBackground(new java.awt.Color(45, 70, 94));
 
         jButton2.setFont(new java.awt.Font("Microsoft Yi Baiti", 0, 16)); // NOI18N
         jButton2.setText("Nuevo Paciente");
@@ -237,6 +214,22 @@ public class Empleado extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Microsoft Yi Baiti", 0, 16)); // NOI18N
+        jButton7.setText("Actualizar Tratamiento");
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton7MouseExited(evt);
+            }
+        });
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -244,18 +237,15 @@ public class Empleado extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -272,6 +262,8 @@ public class Empleado extends javax.swing.JFrame {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7)
                 .addContainerGap())
         );
 
@@ -300,18 +292,21 @@ public class Empleado extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-jButton5.setVisible(false);
 jButton6.setVisible(true);
+jButton7.setVisible(true);
+jButton5.setVisible(false);
 jButton2.setVisible(false);
-jButton3.setVisible(false);// TODO add your handling code here:
+jButton3.setVisible(false);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
         jButton2.setVisible(true);
         jButton3.setVisible(true);
         jButton5.setVisible(true);
-        jButton6.setVisible(false);        // TODO add your handling code here:
+        jButton6.setVisible(false);
+        jButton7.setVisible(false);
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseMoved
@@ -345,6 +340,8 @@ jButton5.setBackground(BTNmenuACT);
 jButton5.setOpaque(true);
 jButton6.setBackground(BTNmenuACT);
 jButton6.setOpaque(true);
+jButton7.setBackground(BTNmenuACT);
+jButton7.setOpaque(true);
 // TODO add your handling code here:
     }//GEN-LAST:event_formWindowOpened
 
@@ -409,6 +406,20 @@ jButton2.setOpaque(true);
     jButton6.setOpaque(true);        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6MouseExited
 
+    private void jButton7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseEntered
+    jButton7.setBackground(BTNmenuMouse);
+    jButton7.setOpaque(true);    // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7MouseEntered
+
+    private void jButton7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseExited
+    jButton7.setBackground(BTNmenuACT);
+    jButton7.setOpaque(true);     // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7MouseExited
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -452,8 +463,41 @@ jButton2.setOpaque(true);
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+public void SetearBTNS(){
+        //no visible
+        jButton2.setVisible(false);
+        jButton3.setVisible(false);
+        jButton5.setVisible(false);
+        jButton6.setVisible(false);
+        jButton7.setVisible(false);
+        //colorFondo
+        jButton1.setBackground(BTNmenuACT);
+        jButton1.setOpaque(true);
+        jButton1.setContentAreaFilled(false); 
+        jButton2.setBackground(BTNmenuACT);
+        jButton2.setOpaque(true);
+        jButton2.setContentAreaFilled(false);
+        jButton3.setBackground(BTNmenuACT);
+        jButton3.setOpaque(true);
+        jButton3.setContentAreaFilled(false); 
+        jButton4.setBackground(BTNmenuACT);
+        jButton4.setOpaque(true);
+        jButton4.setContentAreaFilled(false);
+        jButton5.setBackground(BTNmenuACT);
+        jButton5.setOpaque(true);
+        jButton5.setContentAreaFilled(false);
+        jButton6.setBackground(BTNmenuACT);
+        jButton6.setOpaque(true);
+        jButton6.setContentAreaFilled(false);
+        jButton7.setBackground(BTNmenuACT);
+        jButton7.setOpaque(true);
+        jButton7.setContentAreaFilled(false);   
+}
+
 }
