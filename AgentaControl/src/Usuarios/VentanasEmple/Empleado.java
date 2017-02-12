@@ -111,7 +111,7 @@ public class Empleado extends javax.swing.JFrame {
             }
         });
 
-        jButton7.setText("jButton4");
+        jButton7.setText("vini");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -216,6 +216,7 @@ jButton3.setVisible(false);// TODO add your handling code here:
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
  jButton1.setText("casa");
+ //gayt
         jButton2.setVisible(true);
         jButton3.setVisible(true);
         jButton5.setVisible(false);
