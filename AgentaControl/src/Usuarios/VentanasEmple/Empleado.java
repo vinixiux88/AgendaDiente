@@ -216,7 +216,7 @@ jButton3.setVisible(false);// TODO add your handling code here:
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
  jButton1.setText("casa");
- //gayt
+ //ga
         jButton2.setVisible(true);
         jButton3.setVisible(true);
         jButton5.setVisible(false);
