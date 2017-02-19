@@ -274,6 +274,11 @@ Border thickBorde = new LineBorder(Color.WHITE, 4);
                 jButton3MouseReleased(evt);
             }
         });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Microsoft Yi Baiti", 0, 18)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
@@ -572,10 +577,12 @@ jButton2.setOpaque(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+jPanel2.removeAll();
+jPanel2.repaint();
 nuevaventana nw = new nuevaventana();
 jPanel2.add(nw);
 nw.show();
-        // TODO add your handling code here:
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MousePressed
@@ -691,6 +698,7 @@ System.exit(1);
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
 Color X1 =new Color(53,96,137);
 Border thickBorder = new LineBorder(X1, 86);
+jLabel2.setForeground(Color.white);
 jLabel2.setToolTipText(null); 
         jButton8.setBorder(thickBorder);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2MouseEntered
@@ -698,6 +706,7 @@ jLabel2.setToolTipText(null);
     private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
 Color X1 =new Color(53,96,137);
 Border thickBorder = new LineBorder(X1, 86);
+jLabel3.setForeground(Color.white);
 jLabel3.setToolTipText(null); 
         jButton9.setBorder(thickBorder);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseEntered
@@ -706,14 +715,25 @@ jLabel3.setToolTipText(null);
 
 Border thickBorder = new LineBorder(grisborde, 86);
 jLabel2.setToolTipText(null); 
+jLabel2.setForeground(Color.gray);
         jButton8.setBorder(thickBorder);        // TODO add your handling code here:
     }//GEN-LAST:event_jLabel2MouseExited
 
     private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
 Border thickBorder = new LineBorder(grisborde, 86);
 jLabel3.setToolTipText(null); 
-        jButton9.setBorder(thickBorder);         // TODO add your handling code here:
+jLabel3.setForeground(Color.gray);
+jButton9.setBorder(thickBorder);         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseExited
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+jPanel2.removeAll();
+jPanel2.repaint();
+actualizarPacientes nw = new actualizarPacientes();
+jPanel2.add(nw);
+nw.show(); 
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
