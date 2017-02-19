@@ -579,7 +579,7 @@ jButton2.setOpaque(true);
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 jPanel2.removeAll();
 jPanel2.repaint();
-nuevaventana nw = new nuevaventana();
+NuevoPaciente nw = new NuevoPaciente();
 jPanel2.add(nw);
 nw.show();
 // TODO add your handling code here:
